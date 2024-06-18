@@ -17,7 +17,8 @@
 - [ ] 国一覧ページの作成
 - [ ] クラブチーム一覧ページの作成
 
-#### 国(Country)：m_country
+# DB構成図
+### 国(Country)：m_country
 - 国名(country_name)
 - プレイヤー(player_name)
     - クラブチーム()
@@ -28,7 +29,7 @@
     - 過去の所属クラブチーム
 - W杯優勝回数
 
-#### クラブチーム(ClubTeam)：m_club_team
+### クラブチーム(ClubTeam)：m_club_team
 - プレイヤー一覧(m_player)
     - 国
     - age
