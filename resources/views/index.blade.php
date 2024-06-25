@@ -48,6 +48,5 @@
         </ul>
     </nav>
 
-    <p>{{ $msg }}</p>
 </body>
 </html>

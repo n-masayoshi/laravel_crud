@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\CountriesController;
+use App\Models\Country;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', [HelloController::class, 'index']);
+
+Route::get("/countries",[CountriesController::class, "index"]);
