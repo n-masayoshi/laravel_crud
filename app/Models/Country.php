@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
+    use HasFactory;
     /**
      * 複数代入可能な属性
      *

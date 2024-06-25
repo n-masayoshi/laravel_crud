@@ -58,8 +58,7 @@
                 <tbody>
                     @foreach ($countries as $country)
                     <tr>
-                        <td><a href="{{ route('country.edit', $country) }}">{{ $country->countryId }}</a></td>
-                        <td>{{ $country->countryName }}</td>
+                        <td>{{ $country->country_name }}</td>
                     </tr>
                     @endforeach
                 </tbody>
