@@ -13,10 +13,10 @@ use App\Models\Country;
 | all of them will be assigned to the "web" middleware group.
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/test', [HelloController::class, 'index']);
 
-Route::get("/countries",[CountriesController::class, "index"]);
+Route::get("/",[CountriesController::class, "index"]);
