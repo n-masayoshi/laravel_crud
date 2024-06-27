@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-md-8 col-lg-9">
         <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table-auto">
                 <thead>
                     <tr>
                         {{-- <th>国名</th><th>選手数</th><th>W杯優勝回数</th> --}}
