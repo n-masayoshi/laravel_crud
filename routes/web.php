@@ -19,4 +19,4 @@ use App\Models\Country;
 
 Route::get('/test', [HelloController::class, 'index']);
 
-Route::get("/",[CountriesController::class, "index"]);
+Route::get("/countries",[CountriesController::class, "index"]);
