@@ -18,12 +18,12 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body>
-    <header class="navbar navbar-dark bg-dark">
-        <div class="container">
+    <header class="navbar navbar-dark bg-dark min-h-10 py-4">
+        <div class="container text-xl mx-auto my-0">
             <a href="/" class="navbar-brand">{{ config("app.name") }}</a>
         </div>
     </header>
-    <div class="container py-4">
+    <div class="container py-4 mx-auto my-0">
         @yield("content")
     </div>
 </body>

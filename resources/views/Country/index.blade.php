@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="col-md-8 col-lg-9">
-        <div class="table-responsive">
+        <div class="table-responsive mb-12">
             <table class="border-collapse table-auto w-full text-sm">
                 <thead>
                     <tr>
@@ -26,8 +26,8 @@
                 </tbody>
                 <!-- ページネーションリンクを表示 -->
             </table>
-            {{ $countries->links() }}
         </div>
+        {{ $countries->links() }}
     </div>
 </div>
 @endsection("content")
