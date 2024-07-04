@@ -8,15 +8,6 @@
     - クラブ
         - クラムチーム名(club_team_name)
             - 選手名(player_name), 年齢(age), 国名(country_name)
-
-# TODO
-- [ ] データ登録の仕方
-    - [ ] 国テーブル(m_country)を作成
-        - [ ] 選手名(player_name), 年齢(age), 所属チーム(club_team_name)カラムの作成
-- [ ] データ取得・表示
-- [ ] 国一覧ページの作成
-- [ ] クラブチーム一覧ページの作成
-
 # DB
 ## DB構成図
 ## テーブル一覧
