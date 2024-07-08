@@ -14,7 +14,7 @@ class JapanesePlayers extends Model
      *
      * @var string
      */
-    protected $table = 'japanese_players';
+    protected $table = 't_japanese_players';
 
     /**
      * モデルの属性のデフォルト値
@@ -28,6 +28,15 @@ class JapanesePlayers extends Model
 
     // 主キーのカラムを指定
     protected $primaryKey = 'japanese_player_id';
+
+    /**
+     * IDの自動増分を指定する
+     *
+     * @var bool
+     */
+    public $incrementing = true;
+
+    protected $keyType = 'int';
 
     /**
      * 複数代入の脆弱性の対策

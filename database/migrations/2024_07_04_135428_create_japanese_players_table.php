@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('japanese_layers', function (Blueprint $table) {
-            $table->japanese_player_id();
-            $table->foreignId(`club_team_id`)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->player_name()->nullable(false);
-            $table->player_age()->nullable(false);
-            $table->club_team_name()->nullable(false);
-            $table->national_team_retired_flag();
-            $table->player_retired_flag();
+        Schema::create('t_japanese_players', function (Blueprint $table) {
+            $table->increments('japanese_player_id');
+            $table->integer('club_team_id')->unsigned()->nullable(false);
+            $table->string('player_name', 50)->nullable(false);
+            $table->integer('player_age')->unsigned()->nullable(false);
+            $table->string('club_team_name', 50)->nullable(false);
+            $table->integer('national_team_retired_flag')->unsigned()->default(0);
+            $table->integer('player_retired_flag')->unsigned()->default(0);
             $table->timestamps();
         });
     }
