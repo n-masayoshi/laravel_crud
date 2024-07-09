@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('countries', function (Blueprint $table) {
             $table->id('country_id');
-            $table->string('country_name', 50);
+            $table->string('country_name', 50)->nullable(false);
             $table->timestamps();
         });
     }

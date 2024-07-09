@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('japanese_layers', function (Blueprint $table) {
-            $table->club_team_id();
-            $table->player_name();
-            $table->player_age();
+        Schema::create('t_japanese_players', function (Blueprint $table) {
+            $table->increments('japanese_player_id');
+            $table->integer('country_id')->unsigned()->nullable(false);
+            $table->string('player_name', 50)->nullable(false);
+            $table->integer('player_age')->unsigned()->nullable(false);
+            $table->integer('club_team_id')->unsigned()->nullable(false);
+            $table->string('club_team_name', 50)->nullable(false);
+            $table->integer('national_team_retired_flag')->unsigned()->default(0);
+            $table->integer('player_retired_flag')->unsigned()->default(0);
             $table->timestamps();
         });
     }

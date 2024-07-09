@@ -9,9 +9,14 @@ class Country extends Model
 {
     use HasFactory;
     /**
-     * 複数代入可能な属性
+     * 複数代入の脆弱性の対策
      *
      * @var array
      */
-    protected $fillable = ['country_name'];
+    protected $fillable =
+    [
+        'country_name',
+        // 'WorldCup_count',
+        // 'image',
+    ];
 }
