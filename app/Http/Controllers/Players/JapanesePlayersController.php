@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Players;
 
 use App\Models\Players\JapanesePlayer;
 use Illuminate\Http\Request;
-// use Illuminate\Routing\Controller as BaseController;
 use App\Http\Controllers\Controller;
+// use Illuminate\Routing\Controller as BaseController;
 // use Illuminate\View\View;
 
 class JapanesePlayersController extends Controller
@@ -16,13 +16,16 @@ class JapanesePlayersController extends Controller
     // public function index(Request $request, $country_id)
     public function index()
     {
-        $japanesePlayers = JapanesePlayer::all();
+        // dd($country_id);
+        // $japanesePlayers = JapanesePlayer::where('country_id', $country_id)->select('player_name', 'player_age', 'club_team_name')->get();
         // $japanesePlayers = JapanesePlayer::select(
-        //     'player_name',
-        //     'player_age',
-        //     'club_team_name',
-        // );
-        // )->paginate(5);
+            //     'player_name',
+            //     'player_age',
+            //     'club_team_name',
+            // );
+            // )->paginate(5);
+            // dd($japanesePlayers);
+        $japanesePlayers = JapanesePlayer::all();
         return view("players.japan.index", compact('japanesePlayers'));
     }
 
