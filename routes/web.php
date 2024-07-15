@@ -20,4 +20,4 @@ use App\Http\Controllers\Players\JapanesePlayersController;
 Route::get('/test', [HelloController::class, 'index']);
 
 Route::get("/countries",[CountriesController::class, "index"]);
-Route::get("/japan/players",[JapanesePlayersController::class, "index"]);
+Route::get("/japan/players",[JapanesePlayersController::class, "index"])->name('japan.index');
