@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Players;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class JapanesePlayers extends Model
+class JapanesePlayer extends Model
 {
     use HasFactory;
 

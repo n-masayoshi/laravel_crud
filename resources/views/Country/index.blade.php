@@ -1,6 +1,5 @@
 @extends("layouts.app")
 @section("content")
-{{-- ページネーション：tailwindcss を適用するため --}}
 
 <div class="row">
     <div class="col-md-8 col-lg-9">
@@ -20,7 +19,10 @@
                 <tbody class="bg-white dark:bg-slate-800">
                     @foreach ($countries as $country)
                     <tr>
-                        <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">{{ $country->country_name }}</td>
+                        <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                        >
+                            {{ $country->country_name }}
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

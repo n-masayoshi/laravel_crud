@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
-use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 
-class CountriesController extends BaseController
+class CountriesController extends Controller
 {
     /**
      * Display a listing of the resource.
