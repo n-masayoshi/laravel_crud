@@ -1,18 +1,29 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Players;
 
-use App\Models\Players;
+use App\Models\Players\JapanesePlayer;
 use Illuminate\Http\Request;
+// use Illuminate\Routing\Controller as BaseController;
+use App\Http\Controllers\Controller;
+// use Illuminate\View\View;
 
 class JapanesePlayersController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    // public function index(Request $request, $country_id)
     public function index()
     {
-        //
+        $japanesePlayers = JapanesePlayer::all();
+        // $japanesePlayers = JapanesePlayer::select(
+        //     'player_name',
+        //     'player_age',
+        //     'club_team_name',
+        // );
+        // )->paginate(5);
+        return view("players.japan.index", compact('japanesePlayers'));
     }
 
     /**
