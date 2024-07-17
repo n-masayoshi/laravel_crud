@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,9 +20,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (\App::environment('local')) {
-            // \URL::forceScheme('https');
-        }
+        // if (\App::environment('local')) {
+        //     // \URL::forceScheme('https');
+        // }
         // if (config('app.env') === 'local') {
         if (app()->isLocal()) {
             \URL::forceScheme('http');
@@ -30,5 +31,7 @@ class AppServiceProvider extends ServiceProvider
         if (config('app.env') === 'production') {
             \URL::forceScheme('https');
         }
+
+        Schema::defaultStringLength(191);
     }
 }
