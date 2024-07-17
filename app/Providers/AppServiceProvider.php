@@ -26,5 +26,9 @@ class AppServiceProvider extends ServiceProvider
         if (app()->isLocal()) {
             \URL::forceScheme('http');
         }
+
+        if (config('app.env') === 'production') {
+            \URL::forceScheme('https');
+        }
     }
 }
