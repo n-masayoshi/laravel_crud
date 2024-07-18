@@ -46,8 +46,10 @@ class JapanesePlayer extends Model
      */
     protected $fillable =
     [
+        'country_id',
         'player_name',
         'player_age',
+        'club_team_id',
         'club_team_name'
     ];
 
